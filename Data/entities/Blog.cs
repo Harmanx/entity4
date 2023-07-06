@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Core.entities
+{
+    public class Blog:Base
+    {
+        public Blog() { 
+            Posts=new List<Post>();
+        }
+        public List<Post> Posts { get; set; }
+        public string Url { get; set; }
+        public bool IsPublic { get; set; }
+        public Guid BlogTypeId { get; set; }
+        public BlogType BlogType { get; set; }
+    }
+}
